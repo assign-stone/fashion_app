@@ -118,3 +118,13 @@ https://assign-stone.github.io/fashion_app/
 
 If you want an alternative publish method (for example, force-pushing the `site/` folder to a `gh-pages` branch), tell me and I can add a branch-push workflow instead.
 
+Quick: access the live URL from the Actions run
+------------------------------------------------
+
+1. Open the repository in GitHub and go to the Actions tab.
+2. Find and open the workflow named "Deploy to GitHub Pages (gh-pages branch)" (it may show as "pages-build-deployment" in the UI).
+3. Click the most recent workflow run (the first item in the list).
+4. In the run details, expand the "Deploy to GitHub Pages" step and click the URL shown in its output to open the live site.
+
+This is handy when the Pages URL is provisioned during the run and you want the exact link the workflow published.
+
