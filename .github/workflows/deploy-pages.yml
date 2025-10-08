@@ -20,9 +20,14 @@ jobs:
 
       - name: Prepare site directory
         run: |
+          # copy entire repo into site/ excluding Git metadata and the workflow dir
           mkdir -p site
-          cp -r index.html about.html offers.html contact.html login.html signup.html assets site/ || true
-          cp -n README.md site/ || true
+          # use rsync to avoid copying .git and .github; exclude the site dir itself
+          rsync -av --exclude='.git' --exclude='.github' --exclude='site' ./ site/ || (
+            echo 'rsync failed, fallback to cp'; 
+            cp -r index.html about.html offers.html contact.html login.html signup.html assets site/ || true; 
+            cp -n README.md site/ || true
+          )
 
       - name: Debug — list site directory
         run: |
