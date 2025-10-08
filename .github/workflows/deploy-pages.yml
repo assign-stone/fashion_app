@@ -31,10 +31,13 @@ jobs:
           echo "Print tree (max depth 3)"
           find ./site -maxdepth 3 -type f -print || true
 
-      - name: Publish to gh-pages branch
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Configure Pages
+        uses: actions/configure-pages@v3
+
+      - name: Upload artifact for GitHub Pages
+        uses: actions/upload-pages-artifact@v1
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./site
-          # optional: set publish_branch if you want a different branch (default: gh-pages)
-          publish_branch: gh-pages
+          path: ./site
+
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v1
