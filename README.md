@@ -60,3 +60,33 @@ If you'd like me to run the local git init + commit for you here, say "Please ru
 ---
 
 If you want, I can also generate a ZIP of the project or create a GitHub Actions workflow to deploy to GitHub Pages.
+
+Docker (optional)
+------------------
+You can run this static site in a Docker container using the included Dockerfile and docker-compose.yml.
+
+1. Build and run with Docker Compose (PowerShell):
+
+```powershell
+Set-Location 'C:\Users\os\Downloads\copilot\Fashion_app\fashion_app'
+docker compose up --build
+```
+
+Then open http://localhost:8080 in your browser.
+
+2. Run in detached mode:
+
+```powershell
+docker compose up --build -d
+```
+
+3. Stop and remove containers:
+
+```powershell
+docker compose down
+```
+
+Notes:
+- The Docker image uses the official nginx image and serves the static files from /usr/share/nginx/html.
+- If you prefer a different port change the mapping in `docker-compose.yml`.
+

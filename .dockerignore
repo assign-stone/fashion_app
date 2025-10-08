@@ -1,0 +1,7 @@
+# ignore Git and local editor files
+.git
+.gitignore
+node_modules
+*.md
+*.psd
+*.ai
