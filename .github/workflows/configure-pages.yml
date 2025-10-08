@@ -1,26 +1,12 @@
-name: Ensure GitHub Pages configuration
+name: Disabled - configure-pages
 
-on:
-  push:
-    branches: [ master, main ]
+on: {}
 
-permissions:
-  contents: read
-  pages: write
+# This workflow used to attempt to configure the Pages source via the REST API.
+# Keep it disabled to avoid conflicting updates with the official 'deploy-pages.yml'.
 
 jobs:
-  configure-pages:
+  disabled:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Configure Pages to use gh-pages branch
-        env:
-          GITHUB_REPO: ${{ github.repository }}
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          echo "Configuring Pages for $GITHUB_REPO to use gh-pages:/"
-          curl -sS -X PUT \
-            -H "Accept: application/vnd.github+json" \
-            -H "Authorization: Bearer ${GH_TOKEN}" \
-            https://api.github.com/repos/${GITHUB_REPO}/pages \
-            -d '{"source":{"branch":"gh-pages","path":"/"}}' | jq || true
+      - run: echo "configure-pages workflow intentionally disabled. Use repo Settings → Pages to configure source."

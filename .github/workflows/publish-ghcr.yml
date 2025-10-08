@@ -1,0 +1,9 @@
+name: Disabled - publish-ghcr
+
+on: {}
+
+jobs:
+  disabled:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "publish-ghcr workflow intentionally disabled."
