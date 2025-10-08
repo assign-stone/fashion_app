@@ -68,8 +68,6 @@ If the Pages site is created during the workflow run, open the exact URL publish
 - The JavaScript in `assets/js/main.js` is demo-only: forms are client-side and do not send data to a server.
 - Styles are in `assets/css/styles.css`. The layout is responsive and optimized for small screens.
 - If you prefer a different publishing strategy (for example, pushing the `site/` folder to a `gh-pages` branch), add a branch-push workflow and disable the Pages actions.
-
-## Contact
 - If anything needs changing in the site or the CI/CD setup, edit the files and push; the workflow will pick up the changes.
 
 ### Author
