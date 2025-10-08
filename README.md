@@ -90,3 +90,31 @@ Notes:
 - The Docker image uses the official nginx image and serves the static files from /usr/share/nginx/html.
 - If you prefer a different port change the mapping in `docker-compose.yml`.
 
+
+Deployment
+----------
+
+This repository uses the official GitHub Pages Actions workflow to build and publish the site automatically when changes are pushed to `master`/`main`.
+
+- Active workflow: `.github/workflows/deploy-pages.yml` — this uses `actions/configure-pages`, `actions/upload-pages-artifact`, and `actions/deploy-pages` to publish the `site/` artifact to GitHub Pages.
+- Trigger: the workflow runs on push to `master`/`main` or can be started manually from the Actions UI (look for "Deploy to GitHub Pages").
+
+To trigger a deployment from your local machine, make a small commit and push (or create an empty commit):
+
+```powershell
+# from project root
+git add -A
+git commit -m "docs: update README (deployment instructions)" || echo 'no changes'
+git push
+
+# or trigger without changes
+git commit --allow-empty -m "ci: trigger deploy-pages workflow"
+git push
+```
+
+After the workflow finishes, the site will be available at:
+
+https://assign-stone.github.io/fashion_app/
+
+If you want an alternative publish method (for example, force-pushing the `site/` folder to a `gh-pages` branch), tell me and I can add a branch-push workflow instead.
+
