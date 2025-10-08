@@ -22,21 +22,6 @@ This is a small static fashion website built using only HTML, CSS and JavaScript
 1. Open the project folder.
 2. Double-click `index.html` or open it in your browser.
 
-## Run with Docker (recommended for consistent preview)
-1. From the project root run:
-
-```powershell
-Set-Location 'C:\Users\os\Downloads\copilot\Fashion_app\fashion_app'
-docker compose up --build
-```
-
-2. Open http://localhost:8080
-
-3. To stop:
-
-```powershell
-docker compose down
-```
 
 ## Git workflow (push to publish)
 1. Add, commit and push changes to the default branch (`master` or `main`). The repository contains a GitHub Actions workflow that will deploy to GitHub Pages on push.
@@ -63,6 +48,24 @@ If the Pages site is created during the workflow run, open the exact URL publish
 2. Open the workflow named "Deploy to GitHub Pages (gh-pages branch)" (may appear as "pages-build-deployment").
 3. Click the most recent workflow run (top of the list).
 4. Expand the "Deploy to GitHub Pages" step and click the URL shown in the step output to open the published site.
+
+
+## Run with Docker (recommended for consistent preview)
+1. From the project root run:
+
+```powershell
+Set-Location 'C:\Users\os\Downloads\copilot\Fashion_app\fashion_app'
+docker compose up --build
+```
+
+2. Open http://localhost:8080
+
+3. To stop:
+
+```powershell
+docker compose down
+```
+
 
 ## Notes
 - The JavaScript in `assets/js/main.js` is demo-only: forms are client-side and do not send data to a server.
