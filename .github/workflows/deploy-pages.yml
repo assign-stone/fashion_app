@@ -1,38 +1,28 @@
-name: Deploy to GitHub Pages
+name: Deploy to GitHub Pages (gh-pages branch)
 
 on:
   push:
     branches: [ master, main ]
   workflow_dispatch: {}
 
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
 jobs:
-  build-and-deploy:
+  build-and-publish:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Prepare site directory
         run: |
-          # create a clean folder with only the static site files
-          mkdir site
+          mkdir -p site
           cp -r index.html about.html offers.html contact.html login.html signup.html assets site/ || true
-          # include README if you want
           cp -n README.md site/ || true
 
-      - name: Configure Pages
-        uses: actions/configure-pages@v3
-
-      - name: Upload artifact for GitHub Pages
-        uses: actions/upload-pages-artifact@v1
+      - name: Publish to gh-pages branch
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          path: ./site
-
-      - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v1
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./site
+          # optional: set publish_branch if you want a different branch (default: gh-pages)
+          publish_branch: gh-pages
