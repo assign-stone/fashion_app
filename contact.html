@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — Fashion App</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">FASHION<span>APP</span></a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="offers.html">Offers</a>
+        <a href="contact.html" class="active">Contact</a>
+        <a href="login.html">Login</a>
+        <a href="signup.html" class="btn btn-outline">Sign Up</a>
+      </nav>
+      <button id="navToggle4" class="nav-toggle" aria-label="Toggle navigation">☰</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Contact Us</h1>
+    <p class="lead">We'd love to hear from you. Use the form or reach us directly.</p>
+
+    <div class="contact-grid">
+      <form id="contactForm" class="form-grid">
+        <label>
+          <span>Name</span>
+          <input type="text" name="name" required>
+        </label>
+        <label>
+          <span>Email</span>
+          <input type="email" name="email" required>
+        </label>
+        <label class="full">
+          <span>Message</span>
+          <textarea name="message" rows="5" required></textarea>
+        </label>
+        <div class="form-actions full">
+          <button class="btn" type="submit">Send Message</button>
+        </div>
+      </form>
+
+      <aside class="contact-info">
+        <h3>Our Details</h3>
+        <p>Address: 123 Fashion Lane, Style City</p>
+        <p>Email: hello@fashionapp.example</p>
+        <p>Phone: +1 (555) 123-4567</p>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="copyright">© <span id="year4"></span> Fashion App</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Fashion App — Home</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">FASHION<span>APP</span></a>
+      <nav class="nav" id="mainNav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="offers.html">Offers</a>
+        <a href="contact.html">Contact</a>
+        <a href="login.html">Login</a>
+        <a href="signup.html" class="btn btn-outline">Sign Up</a>
+      </nav>
+      <button id="navToggle" class="nav-toggle" aria-label="Toggle navigation">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-slides" id="heroSlides">
+  <div class="slide active" style="background-image: url('data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'1600\' height=\'900\'><rect width=\'100%\' height=\'100%\' fill=\'%23f5f0ea\' /><text x=\'92%\' y=\'60%\' dominant-baseline=\'middle\' text-anchor=\'end\' font-size=\'48\' fill=\'%23000000\'>Autumn Collection — Up to 40% Off</text></svg>');"></div>
+  <div class="slide" style="background-image: url('data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'1600\' height=\'900\'><rect width=\'100%\' height=\'100%\' fill=\'%23efe9ff\' /><text x=\'92%\' y=\'60%\' dominant-baseline=\'middle\' text-anchor=\'end\' font-size=\'48\' fill=\'%23000000\'>New Arrivals — Street Chic</text></svg>');"></div>
+  <div class="slide" style="background-image: url('data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'1600\' height=\'900\'><rect width=\'100%\' height=\'100%\' fill=\'%23fff6f0\' /><text x=\'92%\' y=\'60%\' dominant-baseline=\'middle\' text-anchor=\'end\' font-size=\'48\' fill=\'%23000000\'>Weekend Flash Sale — Extra 15% Off</text></svg>');"></div>
+      </div>
+      <div class="hero-content container">
+        <h1>Style that tells your story</h1>
+        <p class="lead">Modern cuts, conscious materials — curated looks for every occasion.</p>
+        <a class="btn" href="offers.html">Shop Offers</a>
+      </div>
+    </section>
+
+    <section class="offers container">
+      <h2>Latest Offers</h2>
+      <div class="offers-grid">
+        <article class="offer-card">
+          <div class="thumb" aria-hidden="true" style="background:linear-gradient(120deg,#f6d365,#fda085)"></div>
+          <h3>Autumn Jackets — 40% Off</h3>
+          <p>Warm, tailored, and eco-friendly outerwear.</p>
+          <a class="btn btn-sm" href="offers.html">View</a>
+        </article>
+        <article class="offer-card">
+          <div class="thumb" aria-hidden="true" style="background:linear-gradient(120deg,#a1c4fd,#c2e9fb)"></div>
+          <h3>Denim Days — Buy 1 Get 1 50%</h3>
+          <p>Premium denim with a modern fit.</p>
+          <a class="btn btn-sm" href="offers.html">View</a>
+        </article>
+        <article class="offer-card">
+          <div class="thumb" aria-hidden="true" style="background:linear-gradient(120deg,#e0c3fc,#8ec5fc)"></div>
+          <h3>Accessories — Up to 30% Off</h3>
+          <p>Complete your look with curated accessories.</p>
+          <a class="btn btn-sm" href="offers.html">View</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="enquiry container">
+      <h2>Enquire Now</h2>
+      <form id="enquiryForm" class="form-grid">
+        <label>
+          <span>Name</span>
+          <input type="text" name="name" required>
+        </label>
+        <label>
+          <span>Email</span>
+          <input type="email" name="email" required>
+        </label>
+        <label class="full">
+          <span>Message</span>
+          <textarea name="message" rows="5" required></textarea>
+        </label>
+        <div class="form-actions full">
+          <button class="btn" type="submit">Submit Enquiry</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="socials">
+        <a aria-label="Instagram" href="#">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="4" fill="#000" opacity="0.8"/><path d="M7 7h10v10H7z" fill="#fff"/></svg>
+        </a>
+        <a aria-label="Facebook" href="#">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="4" fill="#000" opacity="0.8"/><path d="M9 8h2v2h2v2h-2v6h-2v-6H9v-2h2V8H9z" fill="#fff"/></svg>
+        </a>
+        <a aria-label="Twitter" href="#">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="4" fill="#000" opacity="0.8"/><path d="M19 7c-.5.3-1 .5-1.6.6.6-.4 1-1 1.2-1.6-.6.4-1.3.7-2 .9C15.8 6 15 6 14.2 6c-1.3 0-2.4.9-2.8 2.1-1 .1-2-.5-2.6-1.3 0 0-.1.1-.1.1 0 1 0 1.9.6 2.6-.6 0-1.1-.2-1.6-.5v.1c0 1.6 1.1 2.9 2.6 3.2-.4.1-.8.1-1.2.1-.3 0-.5 0-.8-.1.5 1.6 2 2.7 3.7 2.7-1.3 1-3 1.6-4.7 1.6-.3 0-.7 0-1-.1 1.7 1.1 3.6 1.7 5.7 1.7 6.8 0 10.6-5.6 10.6-10.5v-.5C20.3 8 19.7 7.5 19 7z" fill="#fff"/></svg>
+        </a>
+      </div>
+      <p class="copyright">© <span id="year"></span> Fashion App — All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
