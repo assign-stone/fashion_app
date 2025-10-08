@@ -18,6 +18,19 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Runner debug info
+        run: |
+          echo "--- runner uname ---"
+          uname -a || true
+          echo "--- rsync version ---"
+          rsync --version || true
+          echo "--- git version ---"
+          git --version || true
+          echo "--- df -h ---"
+          df -h || true
+          echo "--- whoami ---"
+          whoami || true
+
       - name: Prepare site directory
         run: |
           # copy entire repo into site/ excluding Git metadata and the workflow dir
@@ -35,6 +48,10 @@ jobs:
           ls -la ./site || true
           echo "Print tree (max depth 3)"
           find ./site -maxdepth 3 -type f -print || true
+          echo "--- git status in repo (debug) ---"
+          git status --porcelain || true
+          echo "--- git branch (debug) ---"
+          git branch -vv || true
 
       - name: Configure Pages
         uses: actions/configure-pages@v3
